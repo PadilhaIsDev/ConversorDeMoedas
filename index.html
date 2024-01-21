@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div id="container">
+        <label for="tipo-moeda">Escolha a moeda</label>
+            <select id="tipo-moeda" onchange="updateCurrencyInfo()">
+                <option value="real-select">Real</option>
+                <option value="dollar-select">Dollar</option>
+                <option value="euro-select">Euro</option>
+                <option value="libra-select">Libra</option>
+                <option value="yen-select">Yen</option>
+            </select>
+            <h3 id="titulo">Digite um valor R$</h3>
+            <input type="text" id="valor">
+    </div>
+    
+    <button onclick="toConvert()">Convert</button>
+    
+    <div id="container-valores">
+        <div id="dollar" class="valores-bloco">
+            <img src="img/dollar.png" alt="icon cédula dollar" class="img-bloco">
+            <p id="bloco-1">Dollar: </p><span id="bloco-1Value"></span>
+        </div>
+
+        <div id="euro" class="valores-bloco">
+            <img src="img/euro.png" alt="icon cédula euro" class="img-bloco">
+            <p id="bloco-2">Euro: </p><span id="bloco-2Value"></span>
+        </div>
+
+        <div id="libra" class="valores-bloco">
+            <img src="img/libra.png" alt="icon cédula libra" class="img-bloco">
+            <p id="bloco-3">Libra: </p><span id="bloco-3Value"></span>
+        </div>
+
+        <div id="iene" class="valores-bloco">
+            <img src="img/iene.png" alt="icon cédula iene" class="img-bloco">
+            <p id="bloco-4">Yen: </p><span id="bloco-4Value"></span>
+        </div>
+    </div>
+    
+    <footer id="rodape">cotação atualizada em 20/01/2024 15:01</footer>
+        
+    <script src="javascript/script.js"></script>
+</body>
+</html>
